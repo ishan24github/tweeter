@@ -38,10 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'users',
     'tweets',
+    'api',
+
     'bootstrap4',
     'bootstrap_datepicker_plus',
+    'rest_framework',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
