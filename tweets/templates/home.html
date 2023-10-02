@@ -6,6 +6,10 @@
       <div class="card-body">
         <h5 class="card-title">{{ tweet.body }}</h5>
         <p class="card-text">{{ tweet.user }}</p>
+        <form action="{% url 'delete_tweet' id=tweet.id %}" method="POST">
+          {% csrf_token %}
+          <input class="btn btn-default btn-danger" type="submit" value="Delete"/>
+        </form>
       </div>
     </div>
   {% endfor %}

@@ -22,6 +22,11 @@ def tweet_new(request):
     return render(request, 'tweet_new.html', {'form': form})
 
 
+def deleteTweet(request, id):
+    object = Tweet.objects.get(id=id)
+    object.delete()
+    return redirect('home')
+
 
 # class TweetListView(ListView):
 #     model = Tweet

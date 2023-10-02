@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'tweets',
     'bootstrap4',
+    'bootstrap_datepicker_plus',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -130,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 BOOTSTRAP4 = {'include_jquery' : True}
+
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
